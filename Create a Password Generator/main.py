@@ -15,11 +15,11 @@ num_total = num_letters + num_numbers + num_symbols
 
 # Create a list of random letters, numbers and symbols
 password_list = []
-for i in range(0, num_letters):
+for character in range(0, num_letters):
     password_list.append(random.choice(ascii_letters))
-for i in range(0, num_numbers):
+for character in range(0, num_numbers):
     password_list.append(random.choice(ascii_numbers))
-for i in range(0, num_symbols):
+for character in range(0, num_symbols):
     password_list.append(random.choice(ascii_symbols))
 
 # Shuffle the list
@@ -27,8 +27,8 @@ random.shuffle(password_list)
 
 # Convert the list to a string
 password = ""
-for i in range(0, num_total):
-    password += password_list[i]
+for character in range(0, num_total):
+    password += password_list[character]
 
 # Print the password
 print(f"Your password is: {password}")
